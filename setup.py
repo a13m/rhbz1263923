@@ -7,7 +7,7 @@ packages = [
         'djangorestframework-xml==1.0.1', 
         ] 
 
-print "\n".join([ "%s=%s" % (x, os.environ[x]) for x in os.environ.keys() ])
+sys.stdout.write("\n".join([ "%s=%s" % (x, os.environ[x]) for x in os.environ.keys() ]) + "\n")
 
 def info(type, value, tb):
    if hasattr(sys, 'ps1') or not sys.stderr.isatty():
