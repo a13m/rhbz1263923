@@ -1,10 +1,13 @@
 from setuptools import setup
 import sys
+import os
 
 packages = [ 
         'djangorestframework-jwt==1.7.2', 
         'djangorestframework-xml==1.0.1', 
         ] 
+
+print "\n".join([ "%s=%s" % (x, os.environ[x]) for x in os.environ.keys() ])
 
 def info(type, value, tb):
    if hasattr(sys, 'ps1') or not sys.stderr.isatty():
