@@ -21,11 +21,13 @@ def info(type, value, tb):
 
 sys.excepthook = info
 
+
+
 setup(name='YourAppName',
       version='1.0',
       description='OpenShift App',
-      author='Your Name',
+      author='José Padilla',
       author_email='example@example.com',
       url='http://www.python.org/sigs/distutils-sig/',
-      install_requires=packages,
+      install_requires=[],
      )
