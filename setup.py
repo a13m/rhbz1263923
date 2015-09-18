@@ -1,5 +1,6 @@
 from setuptools import setup
 import sys
+import locale
 import os
 
 packages = [ 
@@ -8,7 +9,7 @@ packages = [
         ] 
 
 sys.stdout.write("\n".join([ "%s=%s" % (x, os.environ[x]) for x in os.environ.keys() ]) + "\n")
-sys.stdout.write("encoding = " + sys.getpreferredencoding() + "\n")
+sys.stdout.write("encoding = " + locale.getpreferredencoding() + "\n")
 
 setup(name='YourAppName',
       version='1.0.1',
