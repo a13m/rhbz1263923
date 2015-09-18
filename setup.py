@@ -8,23 +8,7 @@ packages = [
         ] 
 
 sys.stdout.write("\n".join([ "%s=%s" % (x, os.environ[x]) for x in os.environ.keys() ]) + "\n")
-
-def info(type, value, tb):
-   if hasattr(sys, 'ps1') or not sys.stderr.isatty():
-      # we are in interactive mode or we don't have a tty-like
-      # device, so we call the default hook
-      sys.__excepthook__(type, value, tb)
-   else:
-      import traceback, pdb
-      # we are NOT in interactive mode, print the exception...
-      traceback.print_exception(type, value, tb)
-      print
-      # ...then start the debugger in post-mortem mode.
-      pdb.pm()
-
-sys.excepthook = info
-
-
+sys.stdout.write("encoding = " + sys.getpreferredencoding() + "\n")
 
 setup(name='YourAppName',
       version='1.0.1',
