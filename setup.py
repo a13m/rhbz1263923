@@ -1,7 +1,10 @@
+# -*- coding: utf-8 -*-
+
 from setuptools import setup
 import sys
 import locale
 import os
+
 
 packages = [ 
         'djangorestframework-jwt==1.7.2', 
