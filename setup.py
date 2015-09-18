@@ -24,10 +24,10 @@ sys.excepthook = info
 
 
 setup(name='YourAppName',
-      version='1.0',
+      version='1.0.1',
       description='OpenShift App',
       author='José Padilla',
       author_email='example@example.com',
       url='http://www.python.org/sigs/distutils-sig/',
-      install_requires=[],
+      install_requires=packages,
      )
